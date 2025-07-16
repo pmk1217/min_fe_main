@@ -3,7 +3,7 @@ import Timer from './component/Timer';
 import TodayNote from './component/TodayNote';
 import CustomBox from '../../components/customBox/CustomBox';
 import { Box } from '@mui/material';
-import ShortcutKey from './component/shortcutKey';
+import ShortcutKey from './component/ShortcutKey';
 
 const Index = () => {
   return (
