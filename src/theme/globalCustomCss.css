@@ -1,0 +1,400 @@
+/* 2024-12-16 전체덮어쓰기 */
+/* 캘린더 위치  */
+.MuiPickersPopper-root.MuiPopper-root {
+  top: 4px !important;
+}
+
+/* 캘린터 루트(크기) */
+.MuiPopper-root .MuiDateCalendar-root {
+  width: 400px !important;
+  height: 400px !important;
+  max-height: none !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 31px;
+}
+.MuiDateCalendar-root {
+  width: 400px !important;
+  height: 400px !important;
+  max-height: none !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 31px;
+}
+
+/* 배경  */
+.MuiDateCalendar-root .MuiPaper-root {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+/* 헤더 컨테이너*/
+.MuiDateCalendar-root .MuiPickersCalendarHeader-root {
+  position: relative;
+  height: 50px;
+  flex: 0 0 auto;
+  border-bottom: 1px solid #ccc;
+  padding: 0px;
+  width: 360px;
+  margin-top: 0px;
+  min-height: 0px;
+  overflow: visible;
+  max-height: none;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+}
+
+/* 헤더 내 라벨컨테이너  */
+.MuiDateCalendar-root .MuiPickersCalendarHeader-labelContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 700;
+  color: #828282;
+}
+
+.MuiPickersMonth-monthButton {
+  font-size: 16px !important;
+}
+
+.MuiDateCalendar-root .MuiPickersCalendarHeader-labelContainer .MuiPickersCalendarHeader-switchViewButton {
+  display: none;
+}
+
+/* 헤더 내 스위치 컨테이너  */
+.MuiDateCalendar-root .MuiPickersArrowSwitcher-root {
+  position: absolute;
+  height: 30px;
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 헤더 내 Year 선택 컨테이너 */
+.MuiYearCalendar-root {
+  width: 400px !important;
+  height: 446px !important;
+  padding: 0;
+}
+
+.MuiPickersYear-yearButton.Mui-selected,
+.MuiPickersYear-yearButton.Mui-selected:focus {
+  background: #df0a24 !important;
+}
+
+.MuiPickersYear-yearButton.Mui-selected:hover {
+  background: #a50000 !important;
+}
+
+/* 바디 컨테이너  */
+.MuiDayCalendar-root {
+  width: 360px;
+}
+
+/* 바디 내 요일 컨테이너  */
+.MuiDayCalendar-header {
+  width: 100%;
+  height: 28px;
+  justify-content: space-between !important;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+}
+
+/* 바디 내 요일 typo  */
+.MuiTypography-root.MuiDayCalendar-weekDayLabel {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.42px;
+  line-height: 12px;
+  margin: 0;
+}
+
+.MuiTypography-root.MuiDayCalendar-weekDayLabel:first-of-type {
+  color: #df0a24;
+}
+
+.MuiTypography-root.MuiDayCalendar-weekDayLabel:last-of-type {
+  color: #df0a24;
+}
+
+/* 바디 내 month 컨테이너  */
+.MuiDayCalendar-monthContainer {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.MuiPickersSlideTransition-root.MuiDayCalendar-slideTransition {
+  min-height: auto;
+}
+
+/* 바디 내 week 개별 컨테이너  */
+.MuiDayCalendar-weekContainer {
+  margin: 0 !important;
+  padding: 0px 10px;
+  justify-content: space-between !important;
+}
+
+.MuiDayCalendar-weekContainer button:first-of-type {
+  color: #df0a24;
+}
+
+.MuiDayCalendar-weekContainer button:last-of-type {
+  color: #df0a24;
+}
+
+/* 바디 내 데이 typo */
+.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.42px;
+  line-height: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.MuiPickersDay-root:focus.Mui-selected {
+  background: #df0a24 !important;
+}
+.rdrDayToday .rdrDayNumber span:after {
+  background: #9f3838;
+}
+
+/* calendar footer */
+.MuiDialogActions-root.MuiPickersLayout-actionBar {
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 17px;
+  padding-right: 32px;
+}
+
+.MuiDialogActions-root.MuiPickersLayout-actionBar > button:first-of-type,
+.MuiPickersLayout-actionBar .btnToday {
+  padding: 0px 16px;
+  height: 40px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  /* margin-right: 6px;*/
+}
+
+.MuiPickersLayout-actionBar button + button {
+  margin-left: 6px;
+}
+
+.MuiDialogActions-root.MuiPickersLayout-actionBar > button:last-of-type,
+.MuiPickersLayout-actionBar .btnClear {
+  width: 40px;
+  height: 40px;
+  border: none;
+  /*margin-left: 0px;*/
+  background: url('../assets/images/icons/ic_undo_button.svg') no-repeat center center / contain !important;
+  color: transparent;
+}
+
+/* typo 중 today borderLine  */
+.MuiPickersDay-today {
+  border: none !important;
+}
+
+/* year 선택 내 버튼  */
+.MuiPickersYear-yearButton {
+  font-size: 14px !important;
+}
+
+/* selectBox 펼쳤을 때 */
+.MuiPaper-root.MuiMenu-paper {
+  transform: translateY(3px) !important;
+  background: #fff;
+  box-shadow: -4px 0px 28px 0px rgba(0, 0, 0, 0.07) !important;
+  padding: 0px;
+  font-size: 14px;
+  color: #777;
+}
+
+.MuiMenuItem-root {
+  font-size: 15px !important;
+  color: #444 !important;
+  font-weight: 300 !important;
+  padding: 8px !important;
+}
+
+/* select box bug fix  */
+.MuiSelect-select::after {
+  background: url('../assets/images/icons/ic_dropdown_button_down_arrow.svg') no-repeat 50% 50%;
+}
+
+.MuiList-root .MuiMenuItem-root.Mui-selected {
+  background: #f6f6f6;
+  color: #de0048;
+  text-decoration: underline;
+}
+
+.MuiList-root .MuiMenuItem-root {
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+.MuiList-root .MuiMenuItem-root:last-of-type {
+  padding-bottom: 10px;
+}
+
+/* select box bug fix  */
+.MuiSelect-select::before {
+  background: url('../assets/images/icons/ic_dropdown_button_down_arrow.svg') no-repeat center center;
+}
+
+/* snackbar  */
+.notistack-SnackbarContainer {
+  z-index: 9999 !important;
+}
+
+.notistack-SnackbarContainer > div:first-of-type {
+  margin-top: 246px;
+}
+
+.notistack-SnackbarContainer > div {
+  margin-bottom: 40px;
+}
+
+.notistack-CollapseWrapper {
+  padding: 0px !important;
+  padding-left: 0px;
+}
+
+/* padding-left 가 빌드에 적용되었는지 테스트 */
+
+/*csv 다운로드 밑줄제거*/
+a {
+  text-decoration: none !important;
+}
+
+div .react-flow__node {
+  width: 290px;
+  cursor: pointer;
+  -webkit-user-select: auto;
+  /*transition: all 1s;*/
+  /*transform-origin: unset;*/
+}
+
+div .react-flow__handle {
+  width: 8px !important;
+  height: 8px !important;
+  background: #1ebfc7 !important;
+  border: none !important;
+}
+
+path.react-flow__edge-path {
+  stroke: #1ebfc7;
+  stroke-width: 2;
+}
+
+div .react-flow__node.selected > div {
+  border: 2px solid #df0a24;
+}
+
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:focus .react-flow__edge-path,
+.react-flow__edge:focus-visible .react-flow__edge-path {
+  stroke: #df0a24;
+  stroke-width: 3;
+  z-index: 1000;
+}
+
+div .react-flow__pane {
+  cursor: grab;
+}
+@keyframes sparkle {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1);
+    opacity: 0;
+  }
+}
+
+.sparkle-container {
+  position: relative;
+  display: inline-block;
+}
+
+.sparkle-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #ffc83d; /* 원하는 색상으로 변경 */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  animation: sparkle 0.8s ease-out forwards;
+}
+
+.sparkle-circle:nth-child(1) {
+  --x: 30px;
+  --y: -20px;
+  animation-delay: 0s;
+}
+
+.sparkle-circle:nth-child(2) {
+  --x: -30px;
+  --y: 20px;
+  background-color: #ff5733; /* 주황색 */
+  animation-delay: 0.1s;
+}
+
+.sparkle-circle:nth-child(3) {
+  --x: 25px;
+  --y: 30px;
+  background-color: #daf7a6; /* 연두색 */
+  animation-delay: 0.2s;
+}
+
+.sparkle-circle:nth-child(4) {
+  --x: -20px;
+  --y: -25px;
+  background-color: #c70039; /* 빨간색 */
+  animation-delay: 0.3s;
+}
+
+.sparkle-circle:nth-child(5) {
+  --x: 40px;
+  --y: -15px;
+  background-color: #900c3f; /* 자주색 */
+  animation-delay: 0.4s;
+}
+
+.sparkle-circle:nth-child(6) {
+  --x: -35px;
+  --y: 35px;
+  background-color: #1c8d73; /* 녹색 */
+  animation-delay: 0.5s;
+}
+
+.MuiDialogTitle-root {
+  font-size: 20px !important;
+  color: #111111;
+  padding: 27px !important;
+}

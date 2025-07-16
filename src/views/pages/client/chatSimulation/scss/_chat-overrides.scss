@@ -1,0 +1,89 @@
+// 2024-12-12 전체덮어쓰기
+@import '@chatscope/chat-ui-kit-styles/themes/default/variables';
+
+// reset
+$status-xs-fontsize: 12px;
+$status-sm-fontsize: 14px;
+$status-md-fontsize: 16px;
+$status-lg-fontsize: 18px;
+
+$status-ssm-height: 24px;
+$status-sm-height: 38px;
+$status-md-height: 44px;
+$status-lg-height: 48px;
+$status-xlg-height: 52px;
+
+$status-fontWeight-400: 400;
+$status-fontWeight-500: 500;
+$status-fontWeight-700: 700;
+$status-fontWeight-900: 900;
+
+$color-primary-light: #ffebeb;
+$color-primary: #b27071;
+$color-grey-50: #f1f1f1;
+$color-grey-100: #eeeeee;
+$color-grey-200: #cccccc;
+$color-grey-300: #aaaaaa;
+$color-grey-400: #999999;
+$color-grey-500: #777777;
+$color-grey-600: #555555;
+$color-grey-700: #333333;
+$color-background-default: #ffffff;
+
+$color-text: #111;
+$default-font-family:
+  Noto Sans KR,
+  sans-serif;
+$default-border-radius: 20px;
+
+// container
+$main-container-border: 0;
+$main-container-font-size: $status-md-fontsize;
+$main-container-bg-color: transparent;
+$chat-container-bg-color: transparent;
+
+// message
+$message-base-radius: $default-border-radius;
+$message-border-radius: $default-border-radius;
+$message-font-size: $status-md-fontsize;
+$message-font-family: $default-font-family;
+$message-content-font-family: $default-font-family;
+$message-content-font-size: $status-md-fontsize;
+$message-monologue-margin-top: 10px;
+$message-list-bg-color: $color-background-default;
+$message-list-scroll-wrapper-padding: 0 40px 60px;
+$mars-bg-color: $color-grey-50;
+$message-content-color: $color-text;
+$message-content-bg-color: $color-grey-50;
+$message-group-message-content-incoming-bg-color: #9df0c9;
+$message-content-incoming-bg-color: $color-grey-50;
+$message-incoming-color: $color-text;
+$message-content-incoming-color: $color-text;
+$message-content-outgoing-bg-color: $color-primary-light;
+$message-outgoing-color: $color-text;
+$message-content-outgoing-color: $color-text;
+
+// input
+$chat-container-message-input-bg-color: $mars-bg-color;
+$chat-container-message-input-border-top: none;
+$message-input-content-editor-wrapper-padding: 0;
+$message-input-content-editor-container-bg-color: $color-grey-50;
+$message-input-content-editor-wrapper-bg-color: $color-grey-50;
+$message-input-content-editor-bg-color: $color-grey-50;
+$message-input-content-editor-container-font-size: $status-md-fontsize;
+$message-input-content-editor-font-family: $default-font-family;
+$message-input-content-editor-disabled-bg-color: $color-grey-50;
+$message-input-bg-color: $color-grey-50;
+$message-input-content-editor-color: $color-black;
+$message-input-placeholder-color: $color-grey-500;
+
+// button
+$button-font-size: $status-sm-fontsize;
+$button-border-radius: 8px;
+$button-send-color: $color-white;
+$button-send-bg-color: $color-primary;
+$button-line-height: normal;
+$button-attachment-color: $color-primary;
+
+//avatar
+$avatar-md-width: 40px;

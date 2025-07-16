@@ -1,0 +1,135 @@
+// 2024-12-12 전체덮어쓰기
+@charset "utf-8";
+@import './chat-overrides';
+@import '@chatscope/chat-ui-kit-styles/themes/default/main';
+
+.#{$prefix}-main-container {
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.#{$prefix}-message-input {
+  border-radius: 8px;
+  position: relative;
+  padding: 16px 10px 16px 100px;
+  align-items: center;
+  width: 100%;
+
+  .#{$prefix}-button {
+    font-size: $button-font-size;
+    align-self: center;
+  }
+  &__content-editor-wrapper {
+    padding-right: 50px;
+    height: 100%;
+  }
+}
+
+.#{$prefix}-chat-container {
+  height: calc(100% - 250px);
+  margin-top: 60px;
+
+  .#{$prefix}-message {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      border: 10px solid transparent;
+    }
+    &.#{$prefix}-message--outgoing {
+      padding-right: 10px;
+      &::before {
+        right: 0;
+        border-color: #f6e9e9;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+      }
+      .#{$prefix}-message__content {
+        border-radius: $default-border-radius 0 $default-border-radius $default-border-radius;
+        background: #f6e9e9 !important;
+      }
+    }
+    &.#{$prefix}-message--incoming {
+      padding-left: 10px;
+      &::before {
+        left: 0;
+        border-color: $color-grey-50;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+      .#{$prefix}-message__content {
+        border-radius: 0 $default-border-radius $default-border-radius $default-border-radius;
+        max-width: 650px;
+        &-wrapper {
+          min-width: 550px;
+        }
+      }
+    }
+
+    &__content {
+      padding: 10px 20px;
+      //padding: 20px 30px;
+    }
+  }
+}
+
+.#{$prefix}-button {
+  font-size: $button-font-size;
+  &:disabled {
+    cursor: default;
+  }
+  &--send {
+    min-width: 120px;
+    height: 100%;
+
+    font-weight: $status-fontWeight-500;
+    svg {
+      display: none;
+    }
+    &::before {
+      content: 'Send';
+      margin-right: 6px;
+    }
+    &::after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      background: url('../../../../../assets/images/icons/ic_send.svg') no-repeat center;
+      background-size: 20px auto;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// scroll
+.ps {
+  .ps__rail-y,
+  .ps__rail-x {
+    &:hover,
+    &:focus,
+    &.ps--clicking {
+      background-color: transparent;
+      .ps__thumb-y {
+        width: 8px;
+        background-color: $color-grey-400;
+      }
+      .ps__thumb-x {
+        height: 8px;
+        background-color: $color-grey-400;
+      }
+    }
+  }
+  &__thumb-y,
+  &__thumb-x {
+    background-color: $color-grey-400;
+  }
+  &__rail-y {
+    width: 4px;
+  }
+  &__rail-x {
+    height: 4px;
+  }
+}
