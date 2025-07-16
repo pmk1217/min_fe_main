@@ -3,13 +3,25 @@ import { Box, styled, Theme, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import { AlignCenter } from '../CommonLayoutComponents';
 import LNBMenu from './LNBMenu';
+import { useNavigate } from 'react-router-dom';
 
 const LNB = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
   return (
     <LNBContainer theme={theme}>
-      <Typography variant="h3" fontWeight={600}>
-        개인사이트
+      <Typography
+        variant="h3"
+        fontWeight={600}
+        onClick={() => navigate('/')}
+        sx={{
+          '&:hover': {
+            cursor: 'pointer',
+          },
+        }}
+      >
+        MIN
       </Typography>
       {/* <AlignCenter sx={{ pl: 2 }}>
         <GreenSpot />

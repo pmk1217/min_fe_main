@@ -40,7 +40,7 @@ const IndexContainer = styled(Box)((props: { theme: Theme }) => {
     background: '#fff',
     height: '100%',
     borderRadius: '10px',
-    padding: '40px 40px',
+    padding: '25px 25px',
     minWidth: '1280px',
     minHeight: '820px',
     '@media (min-height: 1000px)': {

@@ -7,17 +7,22 @@ import ShortcutKey from './component/ShortcutKey';
 
 const Index = () => {
   return (
-    <Box sx={{ display: 'flex', gap: '10px' }}>
-      <CustomBox title="근무 타이머" width={'330px'}>
-        <Timer />
-      </CustomBox>
-      <CustomBox title="오늘의 할 일" width={'510px'}>
-        <TodayNote />
-      </CustomBox>
-      <CustomBox title="단축키 정리" width={'500px'}>
-        <ShortcutKey />
-      </CustomBox>
-    </Box>
+    <>
+      <Box sx={{ display: 'flex', gap: '10px' }}>
+        <CustomBox title="근무 타이머" width={'330px'}>
+          <Timer />
+        </CustomBox>
+        <CustomBox title="오늘의 할 일" width={'510px'}>
+          <TodayNote />
+        </CustomBox>
+        <CustomBox title="단축키 정리" width={'500px'}>
+          <ShortcutKey />
+        </CustomBox>
+      </Box>
+      <Box sx={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
+        <CustomBox title="정형화 코드" width={'330px'}></CustomBox>
+      </Box>
+    </>
   );
 };
 

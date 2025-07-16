@@ -10,7 +10,7 @@ interface CustomBoxProps {
 
 const CustomBox: React.FC<CustomBoxProps> = ({ title, width, height, children }) => {
   return (
-    <Box border="1px solid #ddd" borderRadius="10px" padding="13px" width={width ? width : '300px'} height={height ? height : '400px'}>
+    <Box border="1px solid #ddd" borderRadius="10px" padding="13px" width={width ? width : '300px'} height={height ? height : '380px'}>
       <BoxTitle variant="h4">{title}</BoxTitle>
       {children}
     </Box>
@@ -21,5 +21,5 @@ export default CustomBox;
 
 const BoxTitle = styled(Typography)({
   fontWeight: '600',
-  padding: '20px 5px 15px 10px',
+  padding: '17px 5px 15px 10px',
 });

@@ -68,7 +68,7 @@ const TodayNote = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          height: '310px',
+          height: '297px',
           p: 0.5,
         }}
       >

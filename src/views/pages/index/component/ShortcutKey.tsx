@@ -188,7 +188,7 @@ export default ShortcutKey;
 
 const ShorkcutKeyContainer = styled(Box)({
   overflow: 'auto',
-  height: '320px',
+  height: '290px',
 });
 
 const KeyListContainer = styled(Box)({
