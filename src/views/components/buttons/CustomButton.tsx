@@ -52,30 +52,31 @@ const CustomMuiButton = styled(Button)<{
     lg: {
       minWidth: '240px',
       fontSize: 16,
-      height: '44px',
+      height: '40px',
     },
     lgm: {
       minWidth: '200px',
       height: '40px',
     },
     md: {
-      minWidth: '180px',
-      height: '38px',
+      minWidth: '160px',
+      height: '40px',
     },
     sm: {
-      minWidth: '160px',
+      minWidth: '110px',
       height: '38px',
     },
     ssm: {
-      minWidth: '80px',
-      height: '30px',
-      borderRadius: props.radius ?? 5,
-      fontSize: 13,
+      minWidth: '57px',
+      height: '24px',
+      borderRadius: props.radius ?? '2px',
+      fontSize: 12,
     },
     primary: {
       backgroundColor: props.theme.palette.secondary.main,
       '&:hover': {
         background: props.theme.palette.secondary.dark,
+        boxShadow: 'none',
       },
       '&.disabled': {
         opacity: '0.3',
@@ -116,10 +117,10 @@ const CustomMuiButton = styled(Button)<{
     alignItems: 'center',
     justifyContent: props.between === 1 ? 'space-between' : undefined,
     gap: props.gap ?? 6,
-    borderRadius: props.radius ?? 8,
+    borderRadius: props.radius ?? '4px',
     textTransform: 'none',
     color: '#fff',
-    fontSize: 14,
+    fontSize: '15px',
     fontWeight: 500,
     padding: '0 10px',
     ...(props.btntype ? buttonStyles[props.btntype] : {}),

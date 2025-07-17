@@ -33,11 +33,3 @@ export enum SnackbarTypes {
   DEFAULT = 'default',
   WARNING = 'warning',
 }
-
-export enum codeText {
-  styled = `const ExplanationText = styled(Typography)({
-          marginTop: '10px',
-          fontSize: '15px',
-          fontWeight: 'bold',
-        });`,
-}

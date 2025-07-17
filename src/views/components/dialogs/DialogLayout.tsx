@@ -4,6 +4,7 @@ import { AlignCenter, CenterBox } from '../CommonLayoutComponents';
 import { DialogBox, DialogTitle, DialogTitleDivider } from './StyledDialogLayout';
 import ic_round_24_modal_close from '../../../assets/images/icons/ic_round_24_modal_close.svg';
 import ic_dialog_close_fix from '../../../assets/images/icons/ic_dialog_close_fix.svg';
+import ic_close from '../../../assets/images/icons/ic_close.svg';
 // import _OutlinedButton from '../../components/button/_OutlinedButton';
 // import _PrimaryButton from '../../components/button/_PrimaryButton.tsx';
 // import _SecondaryButton from '../../components/button/_SecondaryButton';
@@ -56,15 +57,11 @@ const DialogLayout = (props: DialogLayoutProps) => {
   return (
     <Dialog onClose={props.handleClose} open={props.isOpen} sx={styles.dialogArea}>
       <DialogBox sx={{ ...styles, ...(props.sx && props.sx) }}>
-        <DialogTitle variant="h4">{props.title}</DialogTitle>
-        <IconButtonPositioner
-          ismaindialog={props.isMainDialog ? props.isMainDialog.toString() : ''}
-          aria-label="close"
-          onClick={props.handleClose}
-        >
-          <Box component="img" src={props.isMainDialog ? ic_dialog_close_fix : ic_round_24_modal_close} alt="dialog close icon" />
+        <DialogTitle variant="h3">{props.title}</DialogTitle>
+        <IconButtonPositioner aria-label="close" onClick={props.handleClose}>
+          <Box component="img" src={ic_dialog_close_fix} alt="dialog close icon" width={'30px'} />
         </IconButtonPositioner>
-        <DialogTitleDivider theme={theme} />
+        {/* <DialogTitleDivider theme={theme} /> */}
 
         <DialogContent>{props.children}</DialogContent>
         <DialogActions>
@@ -80,17 +77,15 @@ const DialogLayout = (props: DialogLayoutProps) => {
               </AlignCenter>
             </PoAbLeft>
           )} */}
-          <CenterBox>
-            <CustomButton btnsize="sm" onClick={props.handleClose}>
-              {props?.closeTxt ? props.closeTxt : '닫기'}
+          <CustomButton btnsize="sm" onClick={props.handleClose}>
+            {props?.closeTxt ? props.closeTxt : '닫기'}
+          </CustomButton>
+          {((!props.isMainDialog && !props.isDownloadDialog) || props.isConfirm) && (
+            <CustomButton btnsize="sm" onClick={props.handleConfirm ?? props.handleClose} disabled={props.disabled ?? false}>
+              {props?.confirmTxt ? props.confirmTxt : '확인'}
             </CustomButton>
-            {((!props.isMainDialog && !props.isDownloadDialog) || props.isConfirm) && (
-              <CustomButton btnsize="sm" onClick={props.handleConfirm ?? props.handleClose} disabled={props.disabled ?? false}>
-                {props?.confirmTxt ? props.confirmTxt : '확인'}
-              </CustomButton>
-            )}
-            {/* {props.isDownloadDialog && <_SecondaryButton size="small">{t(ButtonKeys.DOWNLOAD)}</_SecondaryButton>} */}
-          </CenterBox>
+          )}
+          {/* {props.isDownloadDialog && <_SecondaryButton size="small">{t(ButtonKeys.DOWNLOAD)}</_SecondaryButton>} */}
         </DialogActions>
       </DialogBox>
     </Dialog>
@@ -99,12 +94,10 @@ const DialogLayout = (props: DialogLayoutProps) => {
 
 export default DialogLayout;
 
-const IconButtonPositioner = styled(IconButton)(() => {
-  return {
-    position: 'absolute',
-    right: '30px',
-    top: '25px',
-  };
+const IconButtonPositioner = styled(IconButton)({
+  position: 'absolute',
+  right: '35px',
+  top: '20px',
 });
 
 const styles = {

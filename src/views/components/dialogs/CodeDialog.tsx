@@ -4,39 +4,33 @@ import { Box, Radio, Typography } from '@mui/material';
 import { AlignCenter } from '../CommonLayoutComponents.tsx';
 import DialogLayout from './DialogLayout.tsx';
 import useConfirm from '../../../utils/ConfirmDialogUtils.ts';
-import { codeText } from '../../../models/common/CommonModel.ts';
 
 const CodeDialog = () => {
   const { confirm } = useConfirm();
   const { codeDialog } = useDialogStore();
-  const codeString = `
-        const ExplanationText = styled(Typography)({
-          marginTop: '10px',
-          fontSize: '15px',
-          fontWeight: 'bold',
-        });`;
 
   return (
     <DialogLayout
       isOpen={codeDialog.isOpen}
-      title={'dd'}
+      title={'정형화 코드'}
       isMainDialog={true}
-      isConfirm={true}
+      isConfirm={false}
       handleClose={() => codeDialog.actions.setIsOpen(false)}
-      sx={{ width: '840px' }}
+      sx={{ width: '700px' }}
     >
       <pre
         style={{
           backgroundColor: '#f4f4f4',
-          padding: '10px',
+          padding: '13px',
           borderRadius: '8px',
           whiteSpace: 'pre-wrap',
           fontFamily: 'Noto Sans KR',
           fontWeight: '600',
           overflowX: 'auto',
+          marginBottom: '10px',
         }}
       >
-        {codeText.styled}
+        {codeDialog.codeDetail}
       </pre>
     </DialogLayout>
   );

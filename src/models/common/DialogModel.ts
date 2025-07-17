@@ -21,8 +21,12 @@ export interface UserHistoryDetailDialogModel extends DialogModel {
 export interface CodeDialogModel {
   isOpen: boolean;
   isConfirmed?: boolean;
+  codeId: number;
+  codeDetail: string;
   actions: {
     setIsOpen: (isOpen: boolean) => void;
     setIsConfirmed: (isConfirmed: boolean) => void;
+    setCodeId: (codeId: number) => void;
+    setCodeDetail: (codeDetail: string) => void;
   };
 }
