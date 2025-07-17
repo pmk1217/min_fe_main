@@ -1,11 +1,12 @@
 //2024-02-11 추가
-import { DialogModel, UserHistoryDetailDialogModel } from '../../models/common/DialogModel';
+import { CodeDialogModel, DialogModel, UserHistoryDetailDialogModel } from '../../models/common/DialogModel';
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 
 interface DialogStore {
   confirmDialog: DialogModel;
   userHistoryDetailDialog: UserHistoryDetailDialogModel;
+  codeDialog: CodeDialogModel;
 }
 
 export const useDialogStore = create<DialogStore>()(
@@ -50,6 +51,22 @@ export const useDialogStore = create<DialogStore>()(
         setUserId: (userId: string) => {
           set((state) => {
             state.userHistoryDetailDialog.userId = userId;
+          });
+        },
+      },
+    },
+    codeDialog: {
+      isOpen: false,
+      isConfirmed: false,
+      actions: {
+        setIsOpen: (isOpen: boolean) => {
+          set((state) => {
+            state.codeDialog.isOpen = isOpen;
+          });
+        },
+        setIsConfirmed: (isConfirmed: boolean) => {
+          set((state) => {
+            state.codeDialog.isConfirmed = isConfirmed;
           });
         },
       },

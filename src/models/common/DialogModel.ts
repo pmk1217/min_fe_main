@@ -17,3 +17,12 @@ export interface UserHistoryDetailDialogModel extends DialogModel {
   actions: DialogModel['actions'] & { setUserId: (userId: string) => void };
 }
 //E : 2024-12-16 추가
+
+export interface CodeDialogModel {
+  isOpen: boolean;
+  isConfirmed?: boolean;
+  actions: {
+    setIsOpen: (isOpen: boolean) => void;
+    setIsConfirmed: (isConfirmed: boolean) => void;
+  };
+}
