@@ -4,15 +4,16 @@ import { PageTitle } from '../common/CommonTypoSet';
 import { AlignCenter } from '../CommonLayoutComponents';
 
 export const DialogBox = styled(Box)({
-  padding: '20px 40px',
+  padding: '35px 40px',
   background: '#fff',
   borderRadius: '16px',
   minWidth: '300px',
 });
 
 export const DialogTitle = styled(PageTitle)({
-  marginBottom: '10px',
+  marginBottom: '20px',
   fontSize: '20px',
+  fontWeight: 'bold',
 });
 
 export const DialogTitleDivider = styled(Divider)((props: { theme: Theme }) => {

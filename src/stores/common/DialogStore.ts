@@ -59,6 +59,7 @@ export const useDialogStore = create<DialogStore>()(
       isOpen: false,
       isConfirmed: false,
       codeId: null,
+      title: '',
       codeDetail: '',
       actions: {
         setIsOpen: (isOpen: boolean) => {
@@ -69,6 +70,11 @@ export const useDialogStore = create<DialogStore>()(
         setIsConfirmed: (isConfirmed: boolean) => {
           set((state) => {
             state.codeDialog.isConfirmed = isConfirmed;
+          });
+        },
+        setTitle: (title: string) => {
+          set((state) => {
+            state.codeDialog.title = title;
           });
         },
         setCodeId: (codeId: number) => {

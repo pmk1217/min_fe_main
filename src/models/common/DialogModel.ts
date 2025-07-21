@@ -22,10 +22,12 @@ export interface CodeDialogModel {
   isOpen: boolean;
   isConfirmed?: boolean;
   codeId: number;
+  title: string;
   codeDetail: string;
   actions: {
     setIsOpen: (isOpen: boolean) => void;
     setIsConfirmed: (isConfirmed: boolean) => void;
+    setTitle: (title: string) => void;
     setCodeId: (codeId: number) => void;
     setCodeDetail: (codeDetail: string) => void;
   };

@@ -12,11 +12,11 @@ const CodeDialog = () => {
   return (
     <DialogLayout
       isOpen={codeDialog.isOpen}
-      title={'정형화 코드'}
+      title={codeDialog.title}
       isMainDialog={true}
       isConfirm={false}
       handleClose={() => codeDialog.actions.setIsOpen(false)}
-      sx={{ width: '700px' }}
+      sx={{ width: codeDialog.title.includes('Api') ? '750px' : '600px' }}
     >
       <pre
         style={{
@@ -27,7 +27,7 @@ const CodeDialog = () => {
           fontFamily: 'Noto Sans KR',
           fontWeight: '600',
           overflowX: 'auto',
-          marginBottom: '10px',
+          marginBottom: '15px',
         }}
       >
         {codeDialog.codeDetail}
