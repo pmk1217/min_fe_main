@@ -115,7 +115,17 @@ const TodayNote = () => {
                       sx={{ mr: 0.5, mb: 0.5 }}
                     />
                     {messages[index]}
-                    <IconButton onClick={() => handleDelete(index)} sx={{ ml: 0.2, mb: 0.3 }}>
+                    <IconButton
+                      onClick={() => handleDelete(index)}
+                      sx={{
+                        ml: 0.2,
+                        mb: 0.3,
+                        '&:hover': {
+                          color: 'black',
+                          transition: 'color 0.5s ease',
+                        },
+                      }}
+                    >
                       <DeleteIcon />
                     </IconButton>
                   </Typography>

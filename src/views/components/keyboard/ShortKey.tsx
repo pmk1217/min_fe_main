@@ -57,6 +57,9 @@ const ShortKey = (props: keyCapProps) => {
             background: 'linear-gradient(to bottom, #ccc, #ddd)', // 내부 키 밝은 그라데이션
             cursor: 'pointer',
           },
+          '&:active': {
+            background: 'linear-gradient(to bottom, #acacac, #acacac)', // 내부 키 밝은 그라데이션
+          },
         }}
       >
         <Typography fontWeight="bold" fontSize={size / 4}>

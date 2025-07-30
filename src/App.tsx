@@ -22,6 +22,7 @@ import UserAuthHistoryIndex from './views/pages/admin/userAuth/UserAuthHistoryIn
 import AccessDenied from './views/fallback/AccessDenied';
 import PageError from './views/fallback/PageError';
 import Index from './views/pages/index/Index';
+import CSSTest from './views/pages/cssTest/CSSTest';
 // E: 2024-12-11 추가
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route element={<CommonLayout />}>
               <Route index element={<Index />} />
               <Route path="chat" element={<ChatIndex />} />
+              <Route path="test" element={<CSSTest />} />
               <Route path="history" element={<ChatHistoryIndex />} />
               <Route path="user-history" element={<UserHistoryIndex />} />
               <Route path="user-auth" element={<UserAuthHistoryIndex />} />

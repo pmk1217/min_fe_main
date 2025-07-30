@@ -22,6 +22,10 @@ const LNBMenu = () => {
         <SvgIcon className="menu-icon" component={IconMessage} inheritViewBox sx={styles.messageIcon} />
         Home
       </MenuButton>
+      <MenuButton isactive={location.pathname === '/test' || location.pathname === '/test'} onClick={() => handleClickMenu('/test')}>
+        <SvgIcon className="menu-icon" component={IconMessage} inheritViewBox sx={styles.messageIcon} />
+        CSS 공부
+      </MenuButton>
       <MenuButton isactive={location.pathname === '/history'} onClick={() => handleClickMenu('/history')}>
         <SvgIcon className="menu-icon" component={IconDoc} inheritViewBox sx={styles.messageIcon} />
         메뉴2
