@@ -7,6 +7,7 @@ interface DialogStore {
   confirmDialog: DialogModel;
   userHistoryDetailDialog: UserHistoryDetailDialogModel;
   codeDialog: CodeDialogModel;
+  shortcutKeyDialog: DialogModel;
 }
 
 export const useDialogStore = create<DialogStore>()(
@@ -39,6 +40,36 @@ export const useDialogStore = create<DialogStore>()(
         },
       },
     },
+
+    shortcutKeyDialog: {
+      isOpen: false,
+      isOnlyConfirmActionDialog: false,
+      confirmMessage: '',
+      onActionConfirm: () => {},
+      actions: {
+        setIsOpen: (isOpen: boolean) => {
+          set((state) => {
+            state.shortcutKeyDialog.isOpen = isOpen;
+          });
+        },
+        setIsOnlyConfirmActionDialog: (isOnlyConfirmActionDialog: boolean) => {
+          set((state) => {
+            state.shortcutKeyDialog.isOnlyConfirmActionDialog = isOnlyConfirmActionDialog;
+          });
+        },
+        setConfirmMessage: (confirmMessage: string) => {
+          set((state) => {
+            state.shortcutKeyDialog.confirmMessage = confirmMessage;
+          });
+        },
+        setOnActionConfirm: (callback: () => void) => {
+          set((state) => {
+            state.shortcutKeyDialog.onActionConfirm = callback;
+          });
+        },
+      },
+    },
+
     userHistoryDetailDialog: {
       isOpen: false,
       userId: undefined,

@@ -3,10 +3,11 @@ import React from 'react';
 
 interface keyCapProps {
   label: string;
+  size?: number;
 }
 
 const ShortKey = (props: keyCapProps) => {
-  const size = 60;
+  const size = props.size ? props.size : 60;
   const center = size / 2;
   const innerSize = size * 0.75; // 내부 박스 크기
 
@@ -17,7 +18,7 @@ const ShortKey = (props: keyCapProps) => {
         width: size,
         height: size,
         borderRadius: '7px',
-        background: 'linear-gradient(to bottom, #f5f5f5, #d0d0d0)', // 위는 밝고, 아래는 어두움
+        background: 'linear-gradient(to bottom, #f5f5f5, #d0d0d0)',
         boxShadow: 'inset 0 0 0 2px #aaa',
       }}
     >
